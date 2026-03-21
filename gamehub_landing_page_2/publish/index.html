@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GameHub | The Neon Frontier of Web3 Gaming</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#25252a",
+                        "on-secondary-container": "#e3fdff",
+                        "surface-tint": "#e08dff",
+                        "surface-container-high": "#1f1f23",
+                        "surface-container-lowest": "#000000",
+                        "primary-fixed": "#d978ff",
+                        "error-dim": "#d73357",
+                        "on-error-container": "#ffb2b9",
+                        "primary-container": "#d978ff",
+                        "surface-bright": "#2c2c30",
+                        "surface-dim": "#0e0e11",
+                        "secondary-fixed-dim": "#00deec",
+                        "secondary-dim": "#00deec",
+                        "tertiary-container": "#fc0078",
+                        "secondary": "#00eefc",
+                        "on-tertiary-container": "#000000",
+                        "surface-container-low": "#131316",
+                        "secondary-container": "#006970",
+                        "on-primary-fixed-variant": "#4c0068",
+                        "tertiary-fixed-dim": "#ff769e",
+                        "on-primary": "#4f006c",
+                        "tertiary-dim": "#e4006c",
+                        "on-primary-fixed": "#000000",
+                        "surface-container": "#19191d",
+                        "on-tertiary-fixed": "#380015",
+                        "outline": "#767579",
+                        "on-error": "#490013",
+                        "error-container": "#a70138",
+                        "on-surface": "#f3f0f4",
+                        "on-secondary": "#005359",
+                        "primary-fixed-dim": "#d160ff",
+                        "inverse-on-surface": "#555458",
+                        "primary": "#e08dff",
+                        "surface-container-highest": "#25252a",
+                        "on-tertiary-fixed-variant": "#760035",
+                        "on-surface-variant": "#acaaae",
+                        "error": "#ff6e84",
+                        "primary-dim": "#bc00fb",
+                        "secondary-fixed": "#00eefc",
+                        "on-tertiary": "#47001d",
+                        "tertiary-fixed": "#ff8eac",
+                        "outline-variant": "#48474b",
+                        "background": "#0e0e11",
+                        "on-primary-container": "#3d0055",
+                        "on-background": "#f3f0f4",
+                        "on-secondary-fixed": "#003f43",
+                        "surface": "#0e0e11",
+                        "inverse-surface": "#fcf8fd",
+                        "tertiary": "#ff6b98",
+                        "inverse-primary": "#9a00cf",
+                        "on-secondary-fixed-variant": "#005e64"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0e0e11; color: #f3f0f4; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hero-gradient { background: radial-gradient(circle at 50% 50%, rgba(224, 141, 255, 0.08) 0%, rgba(14, 14, 17, 0) 70%); }
+        .glass-card { background: rgba(25, 25, 29, 0.6); backdrop-filter: blur(40px); }
+        .glow-border:hover { box-shadow: 0 0 20px rgba(0, 238, 252, 0.15); border-color: rgba(0, 238, 252, 0.3); }
+        .token-sale-gradient { background: linear-gradient(135deg, rgba(224, 141, 255, 0.1) 0%, rgba(0, 238, 252, 0.1) 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="bg-[#0e0e11]/60 backdrop-blur-[40px] docked full-width top-0 sticky z-50 shadow-[0_0_20px_rgba(0,238,252,0.1)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#f3f0f4] font-headline uppercase">GameHub</div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] uppercase tracking-wider text-sm">
+<a class="text-[#f3f0f4]/70 hover:text-[#00eefc] transition-all duration-300" href="#">Presale</a>
+<a class="text-[#f3f0f4]/70 hover:text-[#00eefc] transition-all duration-300" href="#">Utilities</a>
+<a class="text-[#f3f0f4]/70 hover:text-[#00eefc] transition-all duration-300" href="#">Flow</a>
+<a class="text-[#f3f0f4]/70 hover:text-[#00eefc] transition-all duration-300" href="#">Roadmap</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary-container px-6 py-2 font-label font-bold uppercase tracking-widest text-xs rounded hover:translate-y-[-2px] transition-all active:scale-95 duration-150">
+                Connect Wallet
+            </button>
+</div>
+</nav>
+<main>
+<!-- Section 1: Hero -->
+<section class="relative min-h-[921px] flex flex-col items-center justify-center pt-20 pb-32 px-6 hero-gradient overflow-hidden">
+<div class="max-w-5xl w-full text-center z-10">
+<h1 class="font-headline text-5xl md:text-8xl font-bold tracking-tighter leading-none mb-8">
+                    GameHub – The <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Bridge</span> Between Virtual &amp; Real
+                </h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12">
+                    Empowering indie studios to build high-fidelity worlds while bridging digital rewards to real-world assets through GHT Tokenomics.
+                </p>
+<!-- CTA & Progress -->
+<div class="flex flex-col items-center gap-12">
+<button class="bg-gradient-to-r from-primary to-secondary text-on-background px-10 py-5 font-headline font-bold text-lg rounded-lg shadow-[0_0_30px_rgba(224,141,255,0.3)] hover:scale-105 transition-transform duration-300">
+                        BUY GHT TOKEN
+                    </button>
+<div class="w-full max-w-md bg-surface-container-low p-6 rounded-xl border border-outline-variant/10">
+<div class="flex justify-between items-end mb-4">
+<div class="text-left">
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Funding Goal</p>
+<p class="font-headline text-2xl font-bold">85,000 <span class="text-sm font-normal text-on-surface-variant">/ 200,000 HKD</span></p>
+</div>
+<p class="font-headline text-primary font-bold">42.5%</p>
+</div>
+<div class="h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary via-tertiary to-secondary" style="width: 42.5%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute top-1/2 left-0 w-96 h-96 bg-primary/10 blur-[120px] rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute top-1/2 right-0 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+</section>
+<!-- Section 2: Token Sale Card -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-4xl mx-auto">
+<div class="glass-card p-1 border border-outline-variant/20 rounded-2xl glow-border transition-all duration-500 overflow-hidden">
+<div class="token-sale-gradient p-8 md:p-12 flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1 space-y-8">
+<div>
+<h2 class="font-headline text-4xl font-bold mb-2">GHT Token Sale</h2>
+<p class="font-body text-on-surface-variant">Exclusive early-access round for the GameHub ecosystem.</p>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Current Price</p>
+<p class="font-headline text-xl font-bold text-secondary">20 HKD</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Available Supply</p>
+<p class="font-headline text-xl font-bold">10,000 GHT</p>
+</div>
+</div>
+<div class="space-y-4">
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Payment Methods</p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-surface-container-high px-3 py-2 rounded text-xs font-medium border border-outline-variant/20">eHKD</span>
+<span class="bg-surface-container-high px-3 py-2 rounded text-xs font-medium border border-outline-variant/20">USDC</span>
+<span class="bg-surface-container-high px-3 py-2 rounded text-xs font-medium border border-outline-variant/20">Credit Card</span>
+<span class="bg-surface-container-high px-3 py-2 rounded text-xs font-medium border border-outline-variant/20">FPS</span>
+<span class="bg-surface-container-high px-3 py-2 rounded text-xs font-medium border border-outline-variant/20">Open Banking</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/3 bg-surface-container-high rounded-xl p-6 border border-primary/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-2">
+<span class="material-symbols-outlined text-primary opacity-50">verified_user</span>
+</div>
+<h3 class="font-headline text-sm font-bold uppercase mb-4 text-primary">Smart Contract</h3>
+<p class="font-mono text-xs break-all bg-black/40 p-3 rounded border border-outline-variant/30 mb-6">0x5678...efgh</p>
+<button class="w-full bg-surface-container-highest hover:bg-surface-bright py-4 rounded font-label text-xs font-bold tracking-widest uppercase transition-colors">
+                                View on PolygonScan
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Token Utilities -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+<!-- Virtual Redemption -->
+<div class="group relative bg-surface-container p-8 rounded-xl overflow-hidden border border-outline-variant/5 hover:border-primary/40 transition-all duration-500">
+<div class="relative z-10 flex flex-col h-full">
+<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="stadium">stadium</span>
+<h3 class="font-headline text-3xl font-bold mb-4">Virtual Redemption</h3>
+<p class="font-body text-on-surface-variant mb-8 flex-grow">
+                            Convert 1 GHT Token into rare in-game skins and premium digital currency. Unlock exclusive cosmetic rewards tailored to your gaming legacy.
+                        </p>
+<div class="flex items-center gap-2 text-primary font-label text-sm font-bold tracking-widest uppercase">
+                            Redeem Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-10 opacity-5 group-hover:opacity-20 transition-opacity duration-700">
+<span class="material-symbols-outlined text-[240px]" data-icon="token">token</span>
+</div>
+</div>
+<!-- Physical Upgrade -->
+<div class="group relative bg-surface-container p-8 rounded-xl overflow-hidden border border-outline-variant/5 hover:border-secondary/40 transition-all duration-500">
+<div class="relative z-10 flex flex-col h-full">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6" data-icon="package_2">package_2</span>
+<h3 class="font-headline text-3xl font-bold mb-4">Physical Upgrade</h3>
+<p class="font-body text-on-surface-variant mb-8 flex-grow">
+                            Go beyond the screen. Add <span class="text-secondary font-bold">+50 HKD</span> to your token redemption to receive a limited edition 3D-printed physical figurine.
+                        </p>
+<div class="flex items-center gap-2 text-secondary font-label text-sm font-bold tracking-widest uppercase">
+                            Upgrade Reward <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-10 opacity-5 group-hover:opacity-20 transition-opacity duration-700">
+<span class="material-symbols-outlined text-[240px]" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Fund Flow Transparency -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-7xl mx-auto text-center mb-16">
+<h2 class="font-headline text-4xl font-bold mb-4 uppercase tracking-tighter">Fund Flow Transparency</h2>
+<p class="font-body text-on-surface-variant">Automated smart contract distribution ensures every HKD is accounted for.</p>
+</div>
+<div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 mb-16">
+<div class="bg-surface-container p-6 border-l-4 border-primary">
+<p class="font-headline text-3xl font-bold mb-1">40%</p>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Development</p>
+</div>
+<div class="bg-surface-container p-6 border-l-4 border-secondary">
+<p class="font-headline text-3xl font-bold mb-1">20%</p>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Art &amp; Creative</p>
+</div>
+<div class="bg-surface-container p-6 border-l-4 border-tertiary">
+<p class="font-headline text-3xl font-bold mb-1">30%</p>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Marketing</p>
+</div>
+<div class="bg-surface-container p-6 border-l-4 border-outline">
+<p class="font-headline text-3xl font-bold mb-1">10%</p>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Platform Fee</p>
+</div>
+</div>
+<div class="max-w-3xl mx-auto bg-surface-container-high p-8 rounded-lg border border-outline-variant/10 flex items-start gap-6">
+<span class="material-symbols-outlined text-tertiary" data-icon="gavel">gavel</span>
+<p class="font-body text-sm leading-relaxed italic">
+                    "If token utilities are not redeemed by the end of the lock-up period, funds are automatically released to the game studio to ensure continuous project sustainability."
+                </p>
+</div>
+</section>
+<!-- Section 5: Trust & Innovation -->
+<section class="py-24 px-6 bg-surface-container-low overflow-hidden relative">
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-12">
+<div class="space-y-4">
+<h2 class="font-headline text-4xl font-bold tracking-tight">Security-First Infrastructure</h2>
+<p class="font-body text-on-surface-variant">We leverage Zero-Knowledge Proofs and Decentralized Identity (SSI) to ensure player privacy without compromising compliance.</p>
+</div>
+<div class="flex gap-8">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="fingerprint">fingerprint</span>
+</div>
+<p class="font-label text-[10px] uppercase font-bold text-on-surface">SSI Identity</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="lock_open">lock_open</span>
+</div>
+<p class="font-label text-[10px] uppercase font-bold text-on-surface">ZKP Privacy</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-tertiary/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="waves">waves</span>
+</div>
+<p class="font-label text-[10px] uppercase font-bold text-on-surface">DeFi Liquidity</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-8 rounded-2xl border border-outline-variant/10">
+<p class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-8 text-center">Powering the Future With</p>
+<div class="grid grid-cols-2 gap-8 opacity-60">
+<div class="flex items-center justify-center h-12 grayscale hover:grayscale-0 transition-all">
+<span class="font-headline font-bold text-xl">CHAINALYSIS</span>
+</div>
+<div class="flex items-center justify-center h-12 grayscale hover:grayscale-0 transition-all">
+<span class="font-headline font-bold text-xl">POLYGON</span>
+</div>
+<div class="flex items-center justify-center h-12 grayscale hover:grayscale-0 transition-all">
+<span class="font-headline font-bold text-xl">THIRDWEB</span>
+</div>
+<div class="flex items-center justify-center h-12 grayscale hover:grayscale-0 transition-all">
+<span class="font-headline font-bold text-xl">OPENBANKING</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Team & Roadmap -->
+<section class="py-32 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline text-5xl font-bold mb-6">Mission Control</h2>
+<p class="font-body text-lg text-on-surface-variant">Built by a collective of veteran indie developers and blockchain architects committed to rewriting the gaming economy.</p>
+</div>
+</div>
+<div class="relative">
+<!-- Roadmap Line -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-outline-variant to-transparent -translate-y-1/2"></div>
+<div class="grid md:grid-cols-3 gap-12 relative z-10">
+<div class="space-y-6">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline font-bold mb-8 mx-auto md:mx-0 shadow-[0_0_20px_rgba(224,141,255,0.4)]">Q3</div>
+<div class="bg-surface-container p-8 rounded-xl border-t-2 border-primary">
+<h3 class="font-headline text-xl font-bold mb-2">2025: Token Sale</h3>
+<p class="font-body text-sm text-on-surface-variant">Public launch of GHT and governance token distribution for the funding platform.</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-headline font-bold mb-8 mx-auto md:mx-0 shadow-[0_0_20px_rgba(0,238,252,0.4)]">Q4</div>
+<div class="bg-surface-container p-8 rounded-xl border-t-2 border-secondary">
+<h3 class="font-headline text-xl font-bold mb-2">2025: Beta Access</h3>
+<p class="font-body text-sm text-on-surface-variant">First studio prototype deployments and testing of the redemption engine.</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="w-12 h-12 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary font-headline font-bold mb-8 mx-auto md:mx-0 shadow-[0_0_20px_rgba(255,107,152,0.4)]">Q1</div>
+<div class="bg-surface-container p-8 rounded-xl border-t-2 border-tertiary">
+<h3 class="font-headline text-xl font-bold mb-2">2026: Global Launch</h3>
+<p class="font-body text-sm text-on-surface-variant">Full ecosystem rollout including physical figurine shipping and exchange listings.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e11] full-width py-12 border-t border-[#f3f0f4]/15">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-6">
+<div class="text-lg font-bold text-[#f3f0f4] font-headline uppercase">GameHub</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-[#f3f0f4]/50">
+<a class="hover:text-[#ff6b98] transition-colors opacity-80 hover:opacity-100" href="#">Smart Contract</a>
+<a class="hover:text-[#ff6b98] transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="hover:text-[#ff6b98] transition-colors opacity-80 hover:opacity-100" href="#">Discord</a>
+<a class="hover:text-[#ff6b98] transition-colors opacity-80 hover:opacity-100" href="#">FAQ</a>
+<a class="hover:text-[#ff6b98] transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+</div>
+<p class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-[#f3f0f4]/50">
+                © 2025 GameHub. Empowering the Neon Frontier.
+            </p>
+</div>
+</footer>
+</body></html>
