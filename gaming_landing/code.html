@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aetheria Studios | The Future of Community-Powered Web3 Gaming</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glow-sm:hover {
+            box-shadow: 0 0 15px rgba(0, 238, 252, 0.4);
+        }
+        .text-gradient-primary {
+            background: linear-gradient(45deg, #e08dff, #00eefc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-gradient-cta {
+            background: linear-gradient(45deg, #e08dff, #bc00fb);
+        }
+        .bg-gradient-secondary {
+            background: linear-gradient(45deg, #00eefc, #006970);
+        }
+        .glass-panel {
+            background: rgba(14, 14, 17, 0.6);
+            backdrop-filter: blur(40px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-variant": "#25252a",
+                "on-tertiary-fixed": "#380015",
+                "inverse-primary": "#9a00cf",
+                "tertiary": "#ff6b98",
+                "primary-dim": "#bc00fb",
+                "background": "#0e0e11",
+                "on-surface-variant": "#acaaae",
+                "tertiary-container": "#fc0078",
+                "surface-container": "#19191d",
+                "on-secondary-fixed": "#003f43",
+                "on-tertiary": "#47001d",
+                "error-container": "#a70138",
+                "inverse-surface": "#fcf8fd",
+                "on-error-container": "#ffb2b9",
+                "on-secondary-container": "#e3fdff",
+                "secondary-fixed-dim": "#00deec",
+                "surface-tint": "#e08dff",
+                "on-secondary": "#005359",
+                "secondary-dim": "#00deec",
+                "error": "#ff6e84",
+                "surface-dim": "#0e0e11",
+                "surface-container-high": "#1f1f23",
+                "on-primary-fixed-variant": "#4c0068",
+                "tertiary-dim": "#e4006c",
+                "error-dim": "#d73357",
+                "secondary-container": "#006970",
+                "primary-fixed-dim": "#d160ff",
+                "on-tertiary-fixed-variant": "#760035",
+                "secondary-fixed": "#00eefc",
+                "tertiary-fixed": "#ff8eac",
+                "surface-bright": "#2c2c30",
+                "inverse-on-surface": "#555458",
+                "on-background": "#f3f0f4",
+                "surface-container-lowest": "#000000",
+                "primary-container": "#d978ff",
+                "surface-container-highest": "#25252a",
+                "on-surface": "#f3f0f4",
+                "primary": "#e08dff",
+                "on-primary-container": "#3d0055",
+                "secondary": "#00eefc",
+                "on-primary-fixed": "#000000",
+                "on-primary": "#4f006c",
+                "tertiary-fixed-dim": "#ff769e",
+                "on-tertiary-container": "#000000",
+                "on-error": "#490013",
+                "on-secondary-fixed-variant": "#005e64",
+                "surface-container-low": "#131316",
+                "outline-variant": "#48474b",
+                "outline": "#767579",
+                "surface": "#0e0e11",
+                "primary-fixed": "#d978ff"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Plus Jakarta Sans"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary selection:text-on-secondary-fixed overflow-x-hidden">
+<!-- Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e11]/60 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,238,252,0.1)]">
+<div class="relative">
+<div class="flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto w-full">
+<div class="text-2xl font-bold tracking-tighter text-[#f3f0f4] italic font-headline">
+                    Aetheria Studios
+                </div>
+<div class="hidden md:flex gap-8 font-['Space_Grotesk'] uppercase tracking-widest text-sm">
+<a class="text-[#00eefc] border-b-2 border-[#00eefc] pb-1 transition-all" href="#">Games</a>
+<a class="text-[#f3f0f4]/70 hover:text-[#00eefc] transition-colors" href="#">Manifesto</a>
+<a class="text-[#f3f0f4]/70 hover:text-[#00eefc] transition-colors" href="#">Ecosystem</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="px-5 py-2 text-xs font-label font-bold uppercase tracking-widest border border-secondary/20 hover:border-secondary text-secondary transition-all rounded-lg">
+                        Connect Wallet
+                    </button>
+<button class="px-5 py-2 text-xs font-label font-bold uppercase tracking-widest bg-gradient-cta text-on-primary-container hover:glow-sm hover:scale-105 transition-all rounded-lg">
+                        Buy Token
+                    </button>
+</div>
+</div>
+<!-- Separation Logic Line -->
+<div class="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#19191d] to-transparent"></div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover opacity-30" data-alt="Cinematic cyberpunk city skyline with neon lights and deep purple fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtFj0KMPIjCaLliiDm9USX8yL928SpMyONzQ_ELnjwng1LBijweWysMeXohidV8hHzw65HebHIPy6xOA3879EMTtQRZ_1ZcKELurDug42X_7MnAqoW8_DL1p3585cKPv31dB-8KbI-KpqY1QX1oboOBDAU9emssTwqMX8n1sR2vwhtoUYEEEptsDq2DoLskI_qV5V6j3WQ5qLQADZR9WMjhbhO8DgqPQGvVlZqg4VzKNV8WGZGRGLHk6KpQJ0ls0E2UfIGydFfSngX"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-label font-bold uppercase tracking-widest">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+                        Token Presale Live
+                    </div>
+<h1 class="text-6xl md:text-8xl font-headline font-bold leading-none tracking-tighter text-on-background">
+                        Aetheria – <span class="text-gradient-primary">Community-Powered</span> Web3 Action
+                    </h1>
+<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        Fund indie game development through the GHT token presale. Unlock exclusive in-game items and physical merchandise from the Aetheria multiverse.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="px-8 py-4 bg-gradient-cta text-on-primary font-label font-black uppercase tracking-tighter text-lg rounded-lg hover:glow-sm transition-all transform hover:-translate-y-1">
+                            Buy GHT Token Now
+                        </button>
+</div>
+<!-- Progress Bar Module -->
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/10 space-y-4 max-w-md">
+<div class="flex justify-between text-sm font-label uppercase tracking-widest">
+<span class="text-on-surface-variant">Funding Progress</span>
+<span class="text-secondary">42.5%</span>
+</div>
+<div class="h-3 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-gradient-secondary transition-all" style="width: 42.5%"></div>
+</div>
+<div class="flex justify-between font-headline font-bold">
+<span class="text-lg">85,000 HKD</span>
+<span class="text-on-surface-variant/50">200,000 HKD Target</span>
+</div>
+</div>
+</div>
+<!-- Featured Visual / Floating HUD Card -->
+<div class="hidden lg:block relative">
+<div class="relative z-10 p-1 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-2xl">
+<div class="bg-surface rounded-2xl overflow-hidden aspect-[4/5] relative">
+<img alt="" class="w-full h-full object-cover" data-alt="Futuristic cyborg character standing in a neon-lit arena" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATGHO2fK7FQXiZDf1BzDCIvtU477VhVa-xlkgnTMqj2UEJPhamaIJkPhEBCrcIFygSjfNJQJ-t62F3SfDRLBeQDL2xR2f7qDlmoEBkr7WEsKtrxWlqtgTvn7Ot_wQLf3VzVJSu_StgYYUTIyi1UBl2EWBw3l536taIeLL8wjfs3aPPXosnFLY9bJSCbK5Q57fFy_ASWKpx5bPPhf8KXnc14IVdD6ANCcgG9Cie4sUTF5UGk-vkcTpYU18sIzgal_FArPwmPw-OeSrw"/>
+<div class="absolute bottom-0 left-0 right-0 p-8 glass-panel border-t border-outline-variant/20">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-xs font-label text-secondary uppercase tracking-widest">Featured Asset</p>
+<h3 class="text-2xl font-headline font-bold italic">Vanguard Suit Mk.I</h3>
+</div>
+<div class="text-right">
+<p class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Rarity</p>
+<p class="text-primary font-black">LEGENDARY</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Game Introduction -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid lg:grid-cols-2 gap-24 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="aspect-video bg-surface-container rounded-lg overflow-hidden border border-outline-variant/10 shadow-2xl">
+<img alt="" class="w-full h-full object-cover" data-alt="Multiplayer arena combat screenshot showing high-end particle effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuAT4vrEc0ioObrvsC6mjUYZnWfmsdzlDDWfwqv1jruvWRylZ9AzfP2rd3EFHCnT3xuNbfyh4sEatPCTZA8VXnKrvxQIGAMW9a9MsZbMdQgRcqpRmeOJ0oe4aa57oNu76vbmdlPbXXxQA4twVMbw3VZmMn9d-jRiKX3ufbgoYQ3d2VUQg_ox7ZBHB3Ot7IqU-JGsx7wp2ye5F5XV0DMEUEVlcGN9AW41yWGUCHAHMjZbUZw7a5o1JoVH9ELbcNVwvgZjq8ReMivq-z"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/40 group cursor-pointer">
+<div class="w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center bg-primary/10 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-4xl">play_arrow</span>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-8">
+<h2 class="text-5xl font-headline font-bold tracking-tight">Enter the <span class="italic text-secondary">Aetheria</span> Metaverse</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Experience the pinnacle of Web3 action gaming. Aetheria combines the adrenaline of fast-paced multiplayer battles with deep character progression and meaningful ownership.
+                        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-4 border-l-2 border-secondary bg-surface-container/50">
+<h4 class="font-headline font-bold uppercase tracking-widest text-secondary text-sm mb-2">Next-Gen Graphics</h4>
+<p class="text-sm text-on-surface-variant">Built on Unreal Engine 5 for breathtaking visual fidelity.</p>
+</div>
+<div class="p-4 border-l-2 border-primary bg-surface-container/50">
+<h4 class="font-headline font-bold uppercase tracking-widest text-primary text-sm mb-2">PvP Dominance</h4>
+<p class="text-sm text-on-surface-variant">Skill-based matchmaking across competitive arenas.</p>
+</div>
+<div class="p-4 border-l-2 border-tertiary bg-surface-container/50">
+<h4 class="font-headline font-bold uppercase tracking-widest text-tertiary text-sm mb-2">Cross-Platform</h4>
+<p class="text-sm text-on-surface-variant">Seamless play between PC, Console, and Mobile.</p>
+</div>
+<div class="p-4 border-l-2 border-outline bg-surface-container/50">
+<h4 class="font-headline font-bold uppercase tracking-widest text-on-surface text-sm mb-2">True Ownership</h4>
+<p class="text-sm text-on-surface-variant">Every asset is a player-owned digital artifact.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Token Sale Card -->
+<section class="py-32 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-surface-container border border-outline-variant/20 rounded-xl overflow-hidden shadow-2xl">
+<div class="grid md:grid-cols-3">
+<div class="p-12 md:col-span-2 space-y-8">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-gradient-cta flex items-center justify-center text-3xl font-black">G</div>
+<div>
+<h3 class="text-3xl font-headline font-bold">GHT Token Sale</h3>
+<p class="text-on-surface-variant font-label tracking-widest uppercase text-xs">Aetheria Governance &amp; Utility</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8 py-8 border-y border-outline-variant/10">
+<div>
+<p class="text-xs font-label uppercase text-on-surface-variant mb-1">Current Price</p>
+<p class="text-4xl font-headline font-bold">20 HKD <span class="text-sm text-on-surface-variant font-normal">/ Token</span></p>
+</div>
+<div>
+<p class="text-xs font-label uppercase text-on-surface-variant mb-1">Total Supply</p>
+<p class="text-4xl font-headline font-bold">10,000 <span class="text-sm text-on-surface-variant font-normal">GHT</span></p>
+</div>
+</div>
+<div class="space-y-4">
+<p class="text-sm font-label uppercase text-on-surface-variant">Accepted Payment Methods</p>
+<div class="flex flex-wrap gap-4">
+<div class="px-4 py-2 bg-surface-container-high rounded flex items-center gap-2 border border-outline-variant/20">
+<span class="material-symbols-outlined text-secondary">payments</span> eHKD
+                                    </div>
+<div class="px-4 py-2 bg-surface-container-high rounded flex items-center gap-2 border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary">currency_bitcoin</span> USDC
+                                    </div>
+<div class="px-4 py-2 bg-surface-container-high rounded flex items-center gap-2 border border-outline-variant/20">
+<span class="material-symbols-outlined text-tertiary">credit_card</span> Credit Card
+                                    </div>
+<div class="px-4 py-2 bg-surface-container-high rounded flex items-center gap-2 border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface">account_balance</span> FPS / Open Banking
+                                    </div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-12 flex flex-col justify-center space-y-6">
+<div class="p-4 bg-surface-container-lowest border border-outline-variant/30 rounded font-mono text-xs break-all">
+<p class="text-on-surface-variant mb-2 font-label uppercase text-[10px]">Smart Contract Address</p>
+                                0x5678...efgh
+                            </div>
+<div class="space-y-2">
+<p class="text-sm font-label text-on-surface-variant">Listing Info:</p>
+<div class="flex items-center gap-2 text-secondary font-headline font-bold">
+<span class="material-symbols-outlined">swap_horiz</span> Uniswap v3 Pool
+                                </div>
+</div>
+<button class="w-full py-4 bg-secondary text-on-secondary-fixed font-headline font-bold uppercase tracking-widest hover:brightness-110 transition-all rounded-lg">
+                                Participate Now
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Token Utilities (Bento Grid Style) -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16 text-center">
+<h2 class="text-5xl font-headline font-bold mb-4">Dual-Tier Token <span class="text-primary italic">Utilities</span></h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">GHT isn't just a currency; it's your key to the physical and digital evolution of Aetheria.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Digital Card -->
+<div class="group p-8 rounded-xl bg-surface-container-low border border-outline-variant/10 hover:border-secondary/30 transition-all">
+<div class="w-12 h-12 bg-secondary/10 text-secondary flex items-center justify-center rounded-lg mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">sports_esports</span>
+</div>
+<h3 class="text-3xl font-headline font-bold mb-4 italic">In-Game Ecosystem</h3>
+<ul class="space-y-4">
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<div>
+<p class="font-headline font-bold">Rare Asset Claims</p>
+<p class="text-sm text-on-surface-variant">1 GHT Token = 1 Rare Skin + In-game Currency (Est. Value 25 HKD).</p>
+</div>
+</li>
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<div>
+<p class="font-headline font-bold">Governance Rights</p>
+<p class="text-sm text-on-surface-variant">Vote on new map designs, character balancing, and community events.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Physical Card -->
+<div class="group p-8 rounded-xl bg-surface-container-low border border-outline-variant/10 hover:border-primary/30 transition-all">
+<div class="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-lg mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">shopping_bag</span>
+</div>
+<h3 class="text-3xl font-headline font-bold mb-4 italic">Physical Merchandise</h3>
+<ul class="space-y-4">
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-headline font-bold">Limited Collectibles</p>
+<p class="text-sm text-on-surface-variant">Exclusive priority access to limited edition resin figurines and hoodies.</p>
+</div>
+</li>
+<li class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-headline font-bold">Merch Store Staking</p>
+<p class="text-sm text-on-surface-variant">Stake GHT for discounts up to 40% on all physical goods at the Aetheria Store.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Fund Flow Transparency -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="text-4xl font-headline font-bold text-center mb-20 uppercase tracking-widest">Financial <span class="text-secondary">Transparency</span></h2>
+<div class="relative max-w-5xl mx-auto">
+<!-- Diagram Logic -->
+<div class="grid grid-cols-1 lg:grid-cols-7 gap-4 items-center">
+<div class="lg:col-span-1 flex flex-col items-center">
+<div class="p-4 rounded-lg bg-surface-container-highest border border-secondary shadow-[0_0_20px_rgba(0,238,252,0.2)]">
+<span class="material-symbols-outlined text-4xl text-secondary">person</span>
+<p class="text-[10px] font-label text-center mt-2 uppercase">User Buy</p>
+</div>
+</div>
+<div class="lg:col-span-1 hidden lg:flex justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">arrow_forward</span>
+</div>
+<div class="lg:col-span-1 flex flex-col items-center">
+<div class="p-6 rounded-lg bg-surface border border-outline-variant/50">
+<span class="material-symbols-outlined text-4xl text-primary">lock</span>
+<p class="text-[10px] font-label text-center mt-2 uppercase">Smart Contract</p>
+</div>
+</div>
+<div class="lg:col-span-1 hidden lg:flex justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">account_tree</span>
+</div>
+<div class="lg:col-span-3 grid grid-cols-2 gap-4">
+<div class="p-4 rounded-lg bg-surface-container border-l-4 border-secondary/50">
+<p class="text-2xl font-headline font-black">40%</p>
+<p class="text-[10px] font-label uppercase text-on-surface-variant">Development</p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container border-l-4 border-primary/50">
+<p class="text-2xl font-headline font-black">20%</p>
+<p class="text-[10px] font-label uppercase text-on-surface-variant">Art &amp; Assets</p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container border-l-4 border-tertiary/50">
+<p class="text-2xl font-headline font-black">30%</p>
+<p class="text-[10px] font-label uppercase text-on-surface-variant">Marketing</p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container border-l-4 border-on-surface/50">
+<p class="text-2xl font-headline font-black">10%</p>
+<p class="text-[10px] font-label uppercase text-on-surface-variant">Platform Ops</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Tech -->
+<section class="py-24 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid lg:grid-cols-3 gap-12 items-center">
+<div class="lg:col-span-1">
+<h3 class="text-2xl font-headline font-bold mb-4">Hardened Infrastructure</h3>
+<p class="text-on-surface-variant text-sm">Every transaction and identity is secured using state-of-the-art Zero-Knowledge Proofs and Decentralized Identifiers.</p>
+</div>
+<div class="lg:col-span-2 flex flex-wrap justify-center lg:justify-end gap-12 opacity-60">
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all">
+<div class="w-8 h-8 bg-[#8247E5] rounded-full"></div>
+<span class="font-bold">Polygon</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all">
+<div class="w-8 h-8 bg-white rounded-full"></div>
+<span class="font-bold">thirdweb</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all">
+<div class="w-8 h-8 bg-[#375BD2] rounded-full"></div>
+<span class="font-bold">Chainlink</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all">
+<span class="font-bold">Chainalysis</span>
+</div>
+<div class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all">
+<span class="font-bold italic">Open Banking</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Roadmap -->
+<section class="py-32">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="text-4xl font-headline font-bold mb-16 text-center italic uppercase tracking-tighter">Strategic Deployment</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="p-6 bg-surface-container rounded-lg relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 font-black text-6xl opacity-10 group-hover:scale-125 transition-transform">01</div>
+<p class="text-secondary font-headline font-bold mb-2">Q3 2025</p>
+<h4 class="font-headline font-bold text-xl mb-4">GHT Token Sale</h4>
+<p class="text-sm text-on-surface-variant">Public presale and funding round completion.</p>
+</div>
+<div class="p-6 bg-surface-container rounded-lg relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 font-black text-6xl opacity-10 group-hover:scale-125 transition-transform">02</div>
+<p class="text-primary font-headline font-bold mb-2">Q4 2025</p>
+<h4 class="font-headline font-bold text-xl mb-4">Beta Access</h4>
+<p class="text-sm text-on-surface-variant">Closed Alpha/Beta for GHT token holders.</p>
+</div>
+<div class="p-6 bg-surface-container-high rounded-lg relative overflow-hidden group border border-secondary/20">
+<div class="absolute top-0 right-0 p-4 font-black text-6xl opacity-10 group-hover:scale-125 transition-transform">03</div>
+<p class="text-secondary font-headline font-bold mb-2">Q1 2026</p>
+<h4 class="font-headline font-bold text-xl mb-4">Global Launch</h4>
+<p class="text-sm text-on-surface-variant">Official game launch + first Merch drop.</p>
+</div>
+<div class="p-6 bg-surface-container rounded-lg relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 font-black text-6xl opacity-10 group-hover:scale-125 transition-transform">04</div>
+<p class="text-tertiary font-headline font-bold mb-2">Q2 2026</p>
+<h4 class="font-headline font-bold text-xl mb-4">Aetheria DAO</h4>
+<p class="text-sm text-on-surface-variant">Migration to full community governance.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-32 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="text-4xl font-headline font-bold mb-16 italic">Architects of the <span class="text-gradient-primary">Void</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="space-y-4">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant/10">
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="Professional male portrait in futuristic clothing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATATtceVnZsIWlwL9RgZokttJ4O-gV-aZ4xtjfnlA5AZ-IPW853R9PPXaxU77JySaQAa7cddAulKbbOnlK_nWBPPrPYlnC-Bfk5wM320oxPzu2S7Kkmjfg1wAwDfF9Vi6wHCEsvJv2Hogt87N_Wbvt2JzMEYUpxczAKhLAz-Hodx7dYYoDtYd2bFd-suZP5fViki75Mqvonuss1NyHL-qc2jlzPMHkLLFmxyzhw9476YsDot6J6Wnl0Q40HIF6NirZ7E1533jBgb71"/>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold">Kaelen Voss</h4>
+<p class="text-secondary text-xs font-label uppercase tracking-widest">Lead Developer</p>
+</div>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Discord</a>
+</div>
+</div>
+<div class="space-y-4">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant/10">
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="Professional female portrait in futuristic clothing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHgNM17joRp8Yc-cjcanpkxzPzk30LXUj0aqoHC_MczuaTANVq08leXBaKHTeFdaEbztdxdrHyp-mq8iOGW5yrfwUMgXlnSiRsp_E0ZXCqDWpzDVbL4RZ6_6JgfaaKewG_R0EHJxpyxZeuZpkpafsSQKqGWv-akB3w6mroLL0WnZmil_4MYm0mueV1CWxtamG4rifkB_db4pz7hdS3GTQUVXxhQVPZpk3VoSk7v75spmUEnmnAovf26SmZfDVWtWougAYayTTaPjSl"/>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold">Lyra Chen</h4>
+<p class="text-primary text-xs font-label uppercase tracking-widest">Lead Artist</p>
+</div>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Discord</a>
+</div>
+</div>
+<div class="space-y-4">
+<div class="aspect-square bg-surface-container rounded-lg overflow-hidden border border-outline-variant/10">
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="Professional male portrait in futuristic clothing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs-_9pjUX8nP1ctInu_7UYDUVSHT1RjL2gNrhvKtZJ8Ej5XEHoGpEZaS_3iPMUHIkIDTfY6FJV-ceX50c6DB_4f2Et4iH-yXycia0vIhw0JNW6AeFJcebO2kaTJTZT3nfjdic5OKaAeMLKNYL0rFRXXI5ORG5xutjKKyQ3E5RT-T7CMSyxCMddSXfsJVjkA4QF6iLnfUraw78qqRagq_OPjGkHn9SaIBCe8JUX2iytwMF8AY3mwSDGKlwXWkb3pJB8QzyvlpORWwT0"/>
+</div>
+<div>
+<h4 class="text-xl font-headline font-bold">Marcus Thorne</h4>
+<p class="text-tertiary text-xs font-label uppercase tracking-widest">Systems Architect</p>
+</div>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#">Discord</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#131316] w-full py-12 px-8 border-t border-[#19191d]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-lg font-black text-[#f3f0f4] uppercase">Aetheria Studios</div>
+<p class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-tight text-[#f3f0f4]/50 leading-relaxed">
+                    The frontier of decentralized gaming. Powering the next generation of digital assets.
+                </p>
+</div>
+<div class="flex flex-col gap-2 font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-tight">
+<span class="text-[#f3f0f4]/50">Contract: <span class="text-[#00eefc]">0xAE...71B</span></span>
+<a class="text-[#f3f0f4]/50 hover:text-[#e08dff] transition-transform hover:translate-x-1 duration-200" href="#">Whitepaper</a>
+<a class="text-[#f3f0f4]/50 hover:text-[#e08dff] transition-transform hover:translate-x-1 duration-200" href="#">Support</a>
+<a class="text-[#f3f0f4]/50 hover:text-[#e08dff] transition-transform hover:translate-x-1 duration-200" href="#">Privacy</a>
+</div>
+<div class="md:text-right font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-tight text-[#f3f0f4]/50">
+<div class="flex gap-4 md:justify-end mb-4">
+<span class="material-symbols-outlined text-xl hover:text-secondary cursor-pointer">public</span>
+<span class="material-symbols-outlined text-xl hover:text-secondary cursor-pointer">chat</span>
+<span class="material-symbols-outlined text-xl hover:text-secondary cursor-pointer">help</span>
+</div>
+                © 2024 Aetheria Studios. Built on GameHub.
+            </div>
+</div>
+</footer>
+</body></html>

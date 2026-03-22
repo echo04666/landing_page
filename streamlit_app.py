@@ -1,23 +1,23 @@
 """
-Serves the GameHub static landing page inside Streamlit (for local run or Streamlit Community Cloud).
-Source of truth: gamehub_landing_page_2/code.html
+Serves static landing pages inside Streamlit (local or Streamlit Community Cloud).
+Sources: gamehub_landing_page_2/code.html, gaming_landing/code.html
 """
+from __future__ import annotations
+
 from pathlib import Path
 
 import streamlit as st
 import streamlit.components.v1 as components
 
 BASE = Path(__file__).resolve().parent
-HTML_PATH = BASE / "gamehub_landing_page_2" / "code.html"
 
-st.set_page_config(
-    page_title="GameHub | The Neon Frontier of Web3 Gaming",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-)
+# label -> (html path, iframe height px)
+LANDINGS: dict[str, tuple[Path, int]] = {
+    "GameHub — Web3 funding": (BASE / "gamehub_landing_page_2" / "code.html", 5600),
+    "Aetheria — gaming landing": (BASE / "gaming_landing" / "code.html", 7000),
+}
 
-st.markdown(
-    """
+HIDE_CHROME = """
 <style>
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
@@ -30,14 +30,28 @@ st.markdown(
         max-width: 100% !important;
     }
 </style>
-""",
-    unsafe_allow_html=True,
+"""
+
+st.set_page_config(
+    page_title="GameHub & Aetheria Landings",
+    layout="wide",
+    initial_sidebar_state="expanded",
 )
 
-if not HTML_PATH.is_file():
-    st.error(f"Missing landing HTML: `{HTML_PATH}`")
+st.markdown(HIDE_CHROME, unsafe_allow_html=True)
+
+st.sidebar.markdown("### Landing page")
+choice = st.sidebar.radio(
+    "Select page",
+    list(LANDINGS.keys()),
+    label_visibility="collapsed",
+)
+
+path, height = LANDINGS[choice]
+
+if not path.is_file():
+    st.error(f"Missing HTML: `{path}`")
     st.stop()
 
-html = HTML_PATH.read_text(encoding="utf-8")
-# Full document in iframe; tall viewport so hero + footer scroll inside the embed.
-components.html(html, width=None, height=5600, scrolling=True)
+html = path.read_text(encoding="utf-8")
+components.html(html, width=None, height=height, scrolling=True)

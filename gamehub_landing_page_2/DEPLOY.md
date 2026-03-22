@@ -1,6 +1,6 @@
 # Publishing the GameHub landing page
 
-**中文摘要：** 静态页已放在 **`publish/index.html`**。把 **`publish`** 当作网站根目录上传到 **Netlify Drop**、**GitHub Pages** 或 **Cloudflare Pages**，即可获得长期公网链接。若要用 **Streamlit**：仓库根目录的 **`streamlit_app.py`** + **`requirements.txt`**，本地 `streamlit run streamlit_app.py`，或推到 GitHub 后用 **Streamlit Community Cloud** 部署得到 `*.streamlit.app` 链接。详见下文各节。
+**中文摘要：** 静态页已放在 **`publish/index.html`**。若要用 **Streamlit**：根目录 **`streamlit_app.py`** 可在侧边栏切换 **GameHub**（`gamehub_landing_page_2/code.html`）与 **Aetheria**（`gaming_landing/code.html`）；需将上述目录一并提交到 GitHub，再在 **Streamlit Community Cloud** 部署。详见下文各节。
 
 The page is ready for static hosting as a single HTML file (Tailwind + fonts load from CDNs). A copy named **`index.html`** lives in the **`publish/`** folder so hosts that expect a default document work without extra configuration.
 
@@ -37,9 +37,14 @@ Anyone with the link can open the site; choose one provider and keep the project
 2. Upload the **`publish`** folder (or a zip of it).
 3. Assign a `*.pages.dev` hostname or your own domain.
 
-### 4. Streamlit (wraps the same HTML)
+### 4. Streamlit (two landing pages)
 
-The repo includes **`streamlit_app.py`** at the project root: it loads **`gamehub_landing_page_2/code.html`** and shows it in an embedded viewer (Tailwind CDN + fonts still load over the network).
+**`streamlit_app.py`** embeds whichever HTML you pick in the **sidebar**:
+
+- **GameHub — Web3 funding** → `gamehub_landing_page_2/code.html`
+- **Aetheria — gaming landing** → `gaming_landing/code.html`
+
+Tailwind CDN + fonts still load over the network inside the iframe.
 
 **Local:**
 
@@ -54,7 +59,7 @@ Open the URL Streamlit prints (usually `http://localhost:8501`). Others on your 
 
 **Public (Streamlit Community Cloud):**
 
-1. Put the project in a **GitHub** repository (include `streamlit_app.py`, `requirements.txt`, and `gamehub_landing_page_2/code.html`).
+1. Put the project in a **GitHub** repository (include `streamlit_app.py`, `requirements.txt`, `gamehub_landing_page_2/code.html`, and **`gaming_landing/code.html`**).
 2. Sign in at [Streamlit Community Cloud](https://streamlit.io/cloud), **New app**, pick the repo, main file **`streamlit_app.py`**, deploy.
 3. You get a stable `https://*.streamlit.app` link for sharing.
 
