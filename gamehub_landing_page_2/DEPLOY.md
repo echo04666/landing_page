@@ -1,6 +1,6 @@
 # Publishing the GameHub landing page
 
-**中文摘要：** 若要用 **Streamlit** 且要 **两个不同公网链接**：在 Cloud 上建 **两个应用**，同一仓库、同一分支，主文件分别选 **`streamlit_app.py`**（GameHub）与 **`streamlit_gaming_landing.py`**（Aetheria / `gaming_landing`），会得到两个 **`*.streamlit.app`**。详见下文「Streamlit」一节。
+**中文摘要：** **Streamlit** 可建 **多个应用**、多个 **`*.streamlit.app`** 链接：同一仓库、同一分支，主文件分别选 **`streamlit_app.py`**（GameHub）、**`streamlit_gaming_landing.py`**（Aetheria）、**`streamlit_shop.py`**（商城 `shop`）。详见下文「Streamlit」一节。
 
 The page is ready for static hosting as a single HTML file (Tailwind + fonts load from CDNs). A copy named **`index.html`** lives in the **`publish/`** folder so hosts that expect a default document work without extra configuration.
 
@@ -37,14 +37,15 @@ Anyone with the link can open the site; choose one provider and keep the project
 2. Upload the **`publish`** folder (or a zip of it).
 3. Assign a `*.pages.dev` hostname or your own domain.
 
-### 4. Streamlit (two separate public URLs)
+### 4. Streamlit (separate public URLs per landing)
 
-There are **two entry files** so you can run **two Streamlit Cloud apps** on the **same repo** and get **two different** `https://*.streamlit.app` links:
+Use **one Streamlit Cloud app per URL**. Same repo and branch; each app points at a **different main file**:
 
 | Main file on Cloud | Page embedded |
 |--------------------|---------------|
 | **`streamlit_app.py`** | `gamehub_landing_page_2/code.html` (GameHub) |
 | **`streamlit_gaming_landing.py`** | `gaming_landing/code.html` (Aetheria) |
+| **`streamlit_shop.py`** | `shop/code.html` (merch store) |
 
 Shared logic lives in **`streamlit_landing_common.py`** (do not pick this as the Cloud main file).
 
@@ -55,15 +56,15 @@ Tailwind CDN + fonts load over the network inside the iframe.
 ```bash
 cd /path/to/stitch_gamehub_landing_page
 pip install -r requirements.txt
-streamlit run streamlit_app.py              # GameHub — http://localhost:8501
-streamlit run streamlit_gaming_landing.py # Aetheria — use another port: --server.port 8502
+streamlit run streamlit_app.py                 # GameHub
+streamlit run streamlit_gaming_landing.py --server.port 8502   # Aetheria
+streamlit run streamlit_shop.py --server.port 8503             # Shop
 ```
 
-**Public (Streamlit Community Cloud) — two apps:**
+**Public (Streamlit Community Cloud):**
 
-1. Repo must include `requirements.txt`, `streamlit_app.py`, `streamlit_gaming_landing.py`, `streamlit_landing_common.py`, `gamehub_landing_page_2/code.html`, and `gaming_landing/code.html`.
-2. **First app:** **New app** → your repo → branch `main` → main file **`streamlit_app.py`** → choose subdomain A → **Deploy** → URL #1.
-3. **Second app:** **New app** again → **same repo and branch** → main file **`streamlit_gaming_landing.py`** → choose subdomain B → **Deploy** → URL #2.
+1. Repo must include `requirements.txt`, `streamlit_app.py`, `streamlit_gaming_landing.py`, **`streamlit_shop.py`**, `streamlit_landing_common.py`, `gamehub_landing_page_2/code.html`, `gaming_landing/code.html`, and **`shop/code.html`**.
+2. **New app** for each landing: pick repo → branch `main` → set **Main file path** to one of the three `streamlit_*.py` files above → unique subdomain → **Deploy**.
 
 Existing deployments that pointed at `streamlit_app.py` keep working as the GameHub-only app.
 

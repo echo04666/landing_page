@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GameHub Official Merch Store | Web3 Integrated Gaming Gear</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-container": "#3d0055",
+                        "surface-variant": "#25252a",
+                        "outline-variant": "#48474b",
+                        "on-error": "#490013",
+                        "on-secondary": "#005359",
+                        "secondary-container": "#006970",
+                        "on-primary-fixed": "#000000",
+                        "surface-container-lowest": "#000000",
+                        "on-tertiary-fixed": "#380015",
+                        "on-primary": "#4f006c",
+                        "inverse-surface": "#fcf8fd",
+                        "secondary-fixed": "#00eefc",
+                        "primary": "#e08dff",
+                        "surface-container": "#19191d",
+                        "outline": "#767579",
+                        "primary-container": "#d978ff",
+                        "surface-bright": "#2c2c30",
+                        "error-container": "#a70138",
+                        "primary-fixed": "#d978ff",
+                        "on-secondary-fixed": "#003f43",
+                        "background": "#0e0e11",
+                        "secondary-fixed-dim": "#00deec",
+                        "on-surface": "#f3f0f4",
+                        "surface-container-highest": "#25252a",
+                        "secondary": "#00eefc",
+                        "on-tertiary": "#47001d",
+                        "on-secondary-container": "#e3fdff",
+                        "tertiary-fixed": "#ff8eac",
+                        "error-dim": "#d73357",
+                        "error": "#ff6e84",
+                        "on-secondary-fixed-variant": "#005e64",
+                        "surface": "#0e0e11",
+                        "on-primary-fixed-variant": "#4c0068",
+                        "inverse-primary": "#9a00cf",
+                        "surface-tint": "#e08dff",
+                        "on-background": "#f3f0f4",
+                        "tertiary-fixed-dim": "#ff769e",
+                        "inverse-on-surface": "#555458",
+                        "tertiary": "#ff6b98",
+                        "surface-container-high": "#1f1f23",
+                        "tertiary-container": "#fc0078",
+                        "on-tertiary-fixed-variant": "#760035",
+                        "primary-fixed-dim": "#d160ff",
+                        "surface-dim": "#0e0e11",
+                        "on-tertiary-container": "#000000",
+                        "tertiary-dim": "#e4006c",
+                        "surface-container-low": "#131316",
+                        "secondary-dim": "#00deec",
+                        "on-error-container": "#ffb2b9",
+                        "on-surface-variant": "#acaaae",
+                        "primary-dim": "#bc00fb"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(14, 14, 17, 0.6);
+            backdrop-filter: blur(40px);
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #e08dff, #00eefc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .kinetic-pulse:hover {
+            box-shadow: 0 0 20px rgba(0, 238, 252, 0.4);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e11]/60 backdrop-blur-[40px] shadow-[0_8px_32px_0_rgba(0,238,252,0.08)]">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-[1920px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#f3f0f4] uppercase font-headline">GameHub Store</div>
+<div class="hidden md:flex items-center space-x-8 font-headline tracking-tight">
+<a class="text-[#00eefc] font-bold border-b-2 border-[#00eefc] pb-1" href="#">Shop All</a>
+<a class="text-[#f3f0f4]/70 hover:text-[#f3f0f4] transition-colors" href="#">New Drops</a>
+<a class="text-[#f3f0f4]/70 hover:text-[#f3f0f4] transition-colors" href="#">Limited Edition</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block px-4 py-2 text-[#f3f0f4]/70 font-label text-sm hover:text-[#f3f0f4] transition-colors">View My Orders</button>
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary-fixed px-6 py-2.5 font-label font-bold rounded-lg kinetic-pulse transition-all duration-300">
+                    Connect Wallet
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-8 py-16 overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
+<div class="absolute inset-0 bg-gradient-to-l from-secondary/20 to-transparent"></div>
+</div>
+<div class="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<span class="inline-block px-3 py-1 bg-secondary-container/20 text-secondary border border-secondary/20 rounded mb-6 font-label text-xs tracking-widest uppercase">Limited Release</span>
+<h1 class="text-5xl md:text-7xl font-headline font-bold tracking-tighter leading-none mb-8">
+                        GameHub Official Merch – Unlock <span class="gradient-text">Limited Edition</span> Collectibles
+                    </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
+                        Hold GHT tokens to redeem exclusive figurines, apparel, and gift boxes. Powered by smart contracts for transparency and traceability.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary-fixed px-10 py-4 font-label font-extrabold rounded uppercase tracking-tighter kinetic-pulse">
+                            Redeem Merch Now
+                        </button>
+<button class="border border-outline-variant hover:border-secondary/50 px-10 py-4 font-label font-bold rounded transition-all">
+                            View Roadmap
+                        </button>
+</div>
+</div>
+<div class="relative grid grid-cols-12 gap-4 h-[500px]">
+<div class="col-span-7 row-span-2 rounded-xl overflow-hidden shadow-2xl bg-surface-container border border-outline-variant/10">
+<img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500" data-alt="Futuristic high-quality gaming hero figurine" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTd1NNCeKges3jfj7NEZC674Wa8aM2H1bwX_8JvpMiwwkHjiNUrCjYHMyHOEQckSpy7uOgbjqBovjLS5Yz-MUW9zwivN3bsamqmPDFcddGE-RQ41TjvGordMA4wBYwfP06YJfrJVRxzja6YGTxxctSSsLpxOJXul6R6mu_fqbjdupoawu9MzwKu5z4XzVQbOC1UvFzWHgPDfXcXOs-r3NmJy0TxP3Nsu5LfUCu2rzspYvDHkRaJPUMhsoOHMVe5VHr5JLkpxqA6ui4"/>
+</div>
+<div class="col-span-5 rounded-xl overflow-hidden shadow-2xl bg-surface-container border border-outline-variant/10">
+<img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500" data-alt="Sleek black cyberpunk themed hoodie" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkaI1VxzER97d0eCG4vnUzkocluLzsVEiyuIocD6A5zuMhJLU3nYlS3RUQ16zfnDDA23AtQtZRMSK5YJvf9h9Y6Mljm5rNBQXwviEZij5-0NjdSog50nQTZXu6FxxEaMps8D3pnafotBb8kQdR8xaUxeZ86Pk41rNw70oA7_730aqm9NcqVEeT8AMw0x2sr80yiaVor0iHZFPSSs4Y1DB6-h4mUCkK1Ntyx2V8giLulbB8Ro8xxSliZQW0AMsXlpo1fYTUpisoHQD_"/>
+</div>
+<div class="col-span-5 rounded-xl overflow-hidden shadow-2xl bg-surface-container border border-outline-variant/10">
+<img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500" data-alt="Premium gaming mystery gift box" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRsgewOkth_9CGd8ZHXMRNifFLfkzkcYBPC7Xne_UdGqqIXJcnggGv0OUF84n2NdF7-FtOAls3nrnat7GbO6o8p76fZSz5fzqVjwEE46d9VrcbjAuebWxdAm_YVEdyCxv9Cejzng6FI2PBBzJErX8djTDLHr_npV3a8whMYZK9QlDW7ij2lY2fNHLaizvabaNCbcJxvrcc7_lwLrYqw1JOi_kF2_e9pt_qGGyDJWhftgfTVIsALKSJg2PZ-rLiWO-yLxMSgkg8VKni"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Showcase (Bento Grid) -->
+<section class="py-24 px-8 bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-4xl font-headline font-bold tracking-tight mb-4 uppercase">Exclusive Rewards</h2>
+<p class="text-on-surface-variant font-body">Tiered redemption system based on GHT holdings.</p>
+</div>
+<div class="hidden md:block h-[1px] flex-grow mx-12 bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product 1 -->
+<div class="group bg-surface-container rounded-lg p-6 border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
+<div class="aspect-square mb-6 rounded bg-surface overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Limited Edition Hero Figurine close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPrBGVdufuVN5cv3ZO7Z3NzDQpHNMhHY_mHJan9PkyOtuWrrlOZ4U8pcj14ZhC04ljXqbdPH0FPt3kQQSpOhKwjmAhg9XzjaE2OX-JyCWpBKcYDPsCZA8-FFzLDqpdEZH3wU3hel_eixIC8UVyAxIiooPqgnLgDxRA05hTRtnptAm8KZRULcIlRJYPbBewxjpo96sEkRaJaDqadmn1OLu2-je1KaxEBrSmlgmTE1r_FWHtdtK5OF5SHigACblRAIl9SF0ydWjCSta"/>
+</div>
+<h3 class="text-xl font-headline font-bold mb-2">Limited Edition Hero Figurine</h3>
+<div class="flex items-center gap-4 mb-6">
+<span class="text-on-surface-variant line-through text-sm">299 HKD</span>
+<span class="text-secondary font-bold">249 HKD + 1 GHT</span>
+</div>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-extrabold uppercase tracking-tighter hover:bg-secondary hover:text-on-secondary-container transition-all">
+                            Redeem with Token
+                        </button>
+</div>
+<!-- Product 2 -->
+<div class="group bg-surface-container rounded-lg p-6 border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
+<div class="aspect-square mb-6 rounded bg-surface overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High quality themed streetwear hoodie" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4o3Om1H1QI7QFw5tYUZM7NaNzaMOc2RDuLKaI-HFlZhkBkfgRKJ4THADNS6BoNvqEnsp9E0yYjWK63_LqCR7lz8zKXSLpQCOmPxdZFnbBdEqBMha7WHLu8E10SZMtPUxRrnmdildeL6PeThAuuS-0qdEYzoCRO-PT1L4wL9BOgFbIWV8a58LhuTdbwDM8h94Gw0fiZzMhDAW_q2sIOhPZgFVT69fClXpM_8Lu6nOD0Mu04QQz361nNsHAOcwFTuDNCcwMvYLV_c_F"/>
+</div>
+<h3 class="text-xl font-headline font-bold mb-2">Themed Hoodie</h3>
+<div class="flex items-center gap-4 mb-6">
+<span class="text-on-surface-variant line-through text-sm">199 HKD</span>
+<span class="text-secondary font-bold">149 HKD + 1 GHT</span>
+</div>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-extrabold uppercase tracking-tighter hover:bg-secondary hover:text-on-secondary-container transition-all">
+                            Redeem with Token
+                        </button>
+</div>
+<!-- Product 3 -->
+<div class="group bg-surface-container rounded-lg p-6 border border-outline-variant/10 hover:border-primary/30 transition-all duration-300">
+<div class="aspect-square mb-6 rounded bg-surface overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Limited edition hardcover game art book" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdYNv4dJCEWN14N769siGncvC0J9JIcmB4C-J84CfrtKx7CuVxiJkRttnL4g9UphDdR-Vn8w6eoPZx5IAlp3ygw2mRAvqXnyGihaURU2dHcqNOvDs_XrytJPlc1DV9gWrRfTCkBiKVokFt_0brjMl56KeHuhM63tVZFB6OF_lVnlK-bZsVqqJ0xChBaC5ifv9EjsxYMpDRGNv6Mvqmw8vCAbsoQFs1kw9rzadL0-5nNNLAdCkGCX1mSOav4Pp01vK-4UUdr-kXVNYn"/>
+</div>
+<h3 class="text-xl font-headline font-bold mb-2">Game Art Book</h3>
+<div class="flex items-center gap-4 mb-6">
+<span class="text-on-surface-variant line-through text-sm">399 HKD</span>
+<span class="text-secondary font-bold">349 HKD + 1 GHT</span>
+</div>
+<button class="w-full py-4 border border-secondary text-secondary font-label font-extrabold uppercase tracking-tighter hover:bg-secondary hover:text-on-secondary-container transition-all">
+                            Redeem with Token
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Redemption Process -->
+<section class="py-32 px-8 overflow-hidden">
+<div class="max-w-[1440px] mx-auto">
+<div class="text-center mb-24">
+<h2 class="text-4xl md:text-5xl font-headline font-bold tracking-tighter mb-4 uppercase">The Redemption Journey</h2>
+<p class="text-on-surface-variant font-body max-w-2xl mx-auto">Fully transparent, on-chain execution from purchase to delivery.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+<!-- Path Connector -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-primary/10 via-secondary/40 to-primary/10 -translate-y-1/2 -z-10"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center p-8 bg-surface border border-outline-variant/20 rounded-lg">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 text-primary border border-primary/30">
+<span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-3">Step 1</h4>
+<p class="text-sm text-on-surface-variant">Connect wallet and verify GHT token balance.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center p-8 bg-surface border border-outline-variant/20 rounded-lg">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 text-secondary border border-secondary/30">
+<span class="material-symbols-outlined text-3xl">shopping_cart</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-3">Step 2</h4>
+<p class="text-sm text-on-surface-variant">Select product, pay with token + fiat.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center p-8 bg-surface border border-outline-variant/20 rounded-lg">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 text-tertiary border border-tertiary/30">
+<span class="material-symbols-outlined text-3xl">contract</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-3">Step 3</h4>
+<p class="text-sm text-on-surface-variant">Smart contract records order, triggers production.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center p-8 bg-surface border border-outline-variant/20 rounded-lg">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 text-primary border border-primary/30">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-3">Step 4</h4>
+<p class="text-sm text-on-surface-variant">Shipping status on-chain; funds released on delivery.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Integration Module & Payments -->
+<section class="py-24 px-8 bg-surface-container">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl font-headline font-bold mb-6 uppercase tracking-tight">Ecosystem Integration</h2>
+<p class="text-on-surface-variant text-lg mb-10 leading-relaxed">
+                        GameHub Official is more than just a store. It is a core component of the GameHub ecosystem, rewarding players for their in-game achievements and token loyalty.
+                    </p>
+<div class="bg-surface-container-lowest p-6 rounded mb-8 border-l-4 border-secondary">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-label text-secondary uppercase tracking-widest">GHT Token Address</span>
+<span class="material-symbols-outlined text-sm cursor-pointer hover:text-secondary">content_copy</span>
+</div>
+<code class="text-on-surface font-mono text-lg break-all">0x5678...efgh</code>
+</div>
+<div class="flex flex-wrap gap-8 items-center opacity-70">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label text-sm">eHKD / USDC</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="font-label text-sm">Credit Card</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="font-label text-sm">FPS / Open Banking</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-high p-8 rounded-lg text-center border border-outline-variant/10">
+<div class="text-3xl font-headline font-bold text-primary mb-2">4.2M</div>
+<p class="text-xs font-label uppercase text-on-surface-variant">Tokens Circulating</p>
+</div>
+<div class="bg-surface-container-high p-8 rounded-lg text-center border border-outline-variant/10">
+<div class="text-3xl font-headline font-bold text-secondary mb-2">12k+</div>
+<p class="text-xs font-label uppercase text-on-surface-variant">Active Holders</p>
+</div>
+<div class="col-span-2 bg-gradient-to-br from-surface-container-high to-surface p-8 rounded-lg border border-outline-variant/10">
+<div class="flex items-center justify-between mb-4">
+<span class="font-headline font-bold text-xl">Uniswap Liquidity</span>
+<button class="text-secondary text-sm font-label hover:underline">Trade GHT</button>
+</div>
+<div class="h-2 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-primary w-[75%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Tech -->
+<section class="py-32 px-8">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div>
+<h2 class="text-4xl font-headline font-bold mb-8 uppercase leading-tight">Physical Assets <span class="text-secondary">On-Chain</span></h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 bg-secondary/10 flex items-center justify-center text-secondary rounded">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<h5 class="font-bold mb-1">SSI + ZKP Privacy</h5>
+<p class="text-sm text-on-surface-variant">Zero-knowledge proofs for instant age and identity verification without compromising your personal data.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 bg-primary/10 flex items-center justify-center text-primary rounded">
+<span class="material-symbols-outlined">fingerprint</span>
+</div>
+<div>
+<h5 class="font-bold mb-1">Unique NFT Identifiers</h5>
+<p class="text-sm text-on-surface-variant">Every physical item comes with a scannable NFC chip linked to a unique on-chain digital twin.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/10 relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/10 blur-[80px] rounded-full"></div>
+<h4 class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-10">Our Infrastructure Partners</h4>
+<div class="grid grid-cols-2 gap-10 opacity-60">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-container-highest rounded"></div>
+<span class="font-bold tracking-tighter text-xl">Polygon</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-container-highest rounded"></div>
+<span class="font-bold tracking-tighter text-xl">thirdweb</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-container-highest rounded"></div>
+<span class="font-bold tracking-tighter text-xl">Chainlink</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-container-highest rounded"></div>
+<span class="font-bold tracking-tighter text-xl">Alchemy</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews -->
+<section class="py-24 px-8 bg-surface-container-lowest">
+<div class="max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="p-8 bg-surface border border-outline-variant/10 rounded-lg">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Customer avatar male" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAty0J5vrcmQAbUMzBZG9Y4X974jSXItU9Z4UG5YyhuldplBIDmMzjvvcxKG0ALHezID3_5s7fCVBZk2oPNMpeKs--tvQU9DiiHkW-M1AAwfcJznIfa8LJlr4o4xWVMMPdNs3jhATCitUZon2Vs619oB06DQKhSnrq0lO-ghBowVVBBiHIbB64Ggks202fMGXoytiX6wTLkQhVR9T_GkXDnfKEFPdN0jYfJcXkTVySWflenQEHMm4vIIpc_cz0D3i9DqSYnoRF8JWDh"/>
+</div>
+<div>
+<h6 class="font-bold text-sm">CryptoGamer_99</h6>
+<p class="text-xs text-secondary">Verified Holder</p>
+</div>
+</div>
+<p class="text-on-surface-variant italic leading-relaxed">"First time redeeming merch with tokens – super smooth process! The NFT twin appeared in my wallet instantly after purchase."</p>
+</div>
+<!-- Added for visual balance -->
+<div class="p-8 bg-surface border border-outline-variant/10 rounded-lg hidden md:block">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Customer avatar female" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc7bw5CvQUAYzLIgLEZOnvkBA7GTeLjONl_T2rp7OuLsKowkccgBygzAZxf9uFtSPLh9kAk8Aq788ti5XMigShSxoj7_Z6_jgoNSDl5Hogm0cdzyVQTVzOQkdLY80Qac62cO7BIVI08MnjY5igMIQGqpV7nzAWG9OETwQJ_Xt6GxINhumfczwjzJEFNnDqWuWNcUzXPIvrCShDtFlXc9w8qEjvkohZ9hnL7cjNJUiEzypYlwVAF4HTFV36vhkD4twyMoUReGCj2rjW"/>
+</div>
+<div>
+<h6 class="font-bold text-sm">NeonSlayer</h6>
+<p class="text-xs text-secondary">Legendary Collector</p>
+</div>
+</div>
+<p class="text-on-surface-variant italic leading-relaxed">"The hoodie quality is insane. Being able to track the shipping on Polygon makes the wait so much more engaging."</p>
+</div>
+<div class="p-8 bg-surface border border-outline-variant/10 rounded-lg hidden lg:block">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Customer avatar male tech" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2N--2ThIGBjndgtWy7kjniNlqxlfC__cDqyXi0e6NSxbdXJYI8gr2l0LcypH4QKT8ULDSsGPAH8rWqRz7AivO_8v4jkzuncyQrMuL50FYXqYXX8EGHVww3K7zi4YeGUrwIbod3_e9tl59V2w8QWpINW4Yzo_2g7m4JsnXc1VuOZRgTk_aUXTAUYlC32F41axNKkbX8vn87PQ1VAXvaJE0UMqzM-3pLGFD2EpJmAX_4j1hua3UdMO_KBvfhK4cNUDuHSpcK7eXBDsG"/>
+</div>
+<div>
+<h6 class="font-bold text-sm">Web3Wizard</h6>
+<p class="text-xs text-secondary">GHT Whale</p>
+</div>
+</div>
+<p class="text-on-surface-variant italic leading-relaxed">"Redeemed the Art Book using GHT. The smart contract worked flawlessly. This is the future of gaming merchandise."</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 border-t border-[#f3f0f4]/15 bg-[#0e0e11]">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-[1440px] mx-auto">
+<div class="text-center md:text-left">
+<div class="text-lg font-black text-[#f3f0f4] mb-2">GameHub Official</div>
+<p class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-[#f3f0f4]/50">
+                    © 2024 GameHub Official. Verified Smart Contract: 0x71C...92a1
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-6 font-['Plus_Jakarta_Sans'] text-sm tracking-wide">
+<a class="text-[#f3f0f4]/50 hover:text-[#00eefc] transition-colors duration-200" href="#">Discord</a>
+<a class="text-[#f3f0f4]/50 hover:text-[#00eefc] transition-colors duration-200" href="#">Telegram</a>
+<a class="text-[#f3f0f4]/50 hover:text-[#00eefc] transition-colors duration-200" href="#">Instagram</a>
+<a class="text-[#f3f0f4]/50 hover:text-[#00eefc] transition-colors duration-200" href="#">Terms of Service</a>
+<a class="text-[#f3f0f4]/50 hover:text-[#00eefc] transition-colors duration-200" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+</body></html>
