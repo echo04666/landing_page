@@ -134,14 +134,14 @@
 </div>
 </nav>
 <main>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<!-- Hero: no min-h-screen (Streamlit iframe makes 100vh = iframe height → giant gap under fixed nav) -->
+<section class="relative pt-24 md:pt-28 pb-20 md:pb-32 overflow-hidden">
 <!-- Background Image -->
 <div class="absolute inset-0 z-0">
 <img alt="" class="w-full h-full object-cover opacity-30" data-alt="Cinematic cyberpunk city skyline with neon lights and deep purple fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtFj0KMPIjCaLliiDm9USX8yL928SpMyONzQ_ELnjwng1LBijweWysMeXohidV8hHzw65HebHIPy6xOA3879EMTtQRZ_1ZcKELurDug42X_7MnAqoW8_DL1p3585cKPv31dB-8KbI-KpqY1QX1oboOBDAU9emssTwqMX8n1sR2vwhtoUYEEEptsDq2DoLskI_qV5V6j3WQ5qLQADZR9WMjhbhO8DgqPQGvVlZqg4VzKNV8WGZGRGLHk6KpQJ0ls0E2UfIGydFfSngX"/>
 <div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
 </div>
-<div class="relative z-10 max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+<div class="relative z-10 max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 lg:items-center">
 <div class="space-y-8">
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-label font-bold uppercase tracking-widest">
 <span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
